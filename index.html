@@ -16,7 +16,97 @@
 
 </head>
 
-<body>
+<body onload="init()">
+
+
+    <!-- <span id="quiz-start">
+        
+    </span> -->
+
+    <div class="container">
+
+
+
+        <div class="card card-left" style="width: 20rem;">
+            <img src="img/logo 2.png" class="card-img-top" alt="...">
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item list-neu-gtoup">Allgemein IT</li>
+                <li class="list-group-item list-neu-gtoup">HTML</li>
+                <li class="list-group-item list-neu-gtoup">CSS</li>
+                <li class="list-group-item list-neu-gtoup">Javascript</li>
+            </ul>
+
+        </div>
+
+        <div class="card quiz-card">
+
+            <div>
+                <p>Welcome to</p>
+                <p>The Awesome IT Quest</p>
+                <p>Click to start</p>
+            </div>
+
+            <div class="container-win" id="endscreen" style="display: none;">
+                <div class="container-win-picture">
+                    <img src="img/Group 5.png">
+                </div>
+
+                <div class="container-win-text">COMPLETE Allgemein IT Quiz!
+                </div>
+
+                <div class="score">YOUR SCORE <b id="amount-right-questions">XXX</b>/<b id="amount-questions">XXX</b>
+                </div>
+
+                <button class="share-botton">SHARE</button>
+
+                <button onclick="restartGame()" class="replay-botton">REPLAY</button>
+            </div>
+
+
+            <div class="card-body" id="questionsbody">
+
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" id="progress-bar">0%</div>
+                </div>
+
+                <h5 class="card-title" id="questionText">Frage</h5>
+
+                <div class="card mb-2 qiuz-answer-card">
+                    <div class="card-body" id="answer_1" onclick="answer('answer_1')">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="card mb-2 qiuz-answer-card">
+                    <div class="card-body" id="answer_2" onclick="answer('answer_2')">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="card mb-2 qiuz-answer-card">
+                    <div class="card-body" id="answer_3" onclick="answer('answer_3')">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="card mb-2 qiuz-answer-card">
+                    <div class="card-body" id="answer_4" onclick="answer('answer_4')">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <span>
+                        <b id="questions-number">1</b> von <b id="numberOfQuestions">5</b> Fragen
+                    </span>
+
+                    <button onclick="nextQuestion()" class="btn btn-info" id="next-button" disabled>Nächste Frage</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 

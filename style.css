@@ -1,4 +1,131 @@
 body {
-    min-height: 100vh;
-    background-color: rgb(148, 148, 224) !important;
+    margin: 0;
+}
+
+.card-left {
+    margin-left: 30px;
+    height: 44rem !important;
+    background-color: rgb(93, 88, 181) !important;
+}
+
+.qiuz-start {
+    position: fixed;
+    z-index: 999px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-image: url(img/bg\ b.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.quiz-card {
+    width: 100rem;
+    height: 100rem;
+    margin-left: 30px;
+}
+
+.card {
+    --bs-card-spacer-y: 3rem !important;
+}
+
+.list-neu-gtoup {
+    --bs-list-group-item-padding-x: 2rem !important;
+    cursor: pointer;
+}
+
+.list-neu-gtoup:hover {
+    color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+.footer {
+    /* border-top: 2px solid rgba(0, 0, 0, 0.3); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.qiuz-answer-card:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-success,
+.bg-danger {
+    color: white;
+}
+
+.container-win {
+    background-color: rgb(247, 213, 187);
+    border-radius: 100%;
+    height: 600px;
+    width: 600px;
+    margin: 50px;
+    margin-left: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-win-text {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container-win-picture {
+    margin-top: 30px;
+}
+
+.score {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+
+.share-botton {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: orange;
+    width: 200px;
+    border-radius: 3px;
+}
+
+.replay-botton {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.progress {
+    margin-bottom: 22px;
+}
+
+.card-body {
+    padding-top: 44px !important;
+    padding-bottom: 45px !important;
 }
