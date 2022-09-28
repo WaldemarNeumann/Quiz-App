@@ -9,12 +9,6 @@ body {
 }
 
 .qiuz-start {
-    position: fixed;
-    z-index: 999px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -22,21 +16,41 @@ body {
 }
 
 .container {
-    background-image: url(img/bg\ b.png);
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100vh !important;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
+.container-start {
+    background-image: url(img/bg\ b.png);
+    background-size: cover;
+    background-position: bottom;
+    height: 600px;
+    width: 600px;
+    margin-left: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-text {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.start-botton {
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
 .quiz-card {
     width: 100rem;
-    height: 100rem;
     margin-left: 30px;
+    border: none !important;
 }
 
 .card {
@@ -87,6 +101,7 @@ body {
 .container-win-text {
     margin-top: 30px;
     font-size: 30px;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
 }
 
@@ -125,7 +140,553 @@ body {
     margin-bottom: 22px;
 }
 
-.card-body {
+.card-body1 {
     padding-top: 44px !important;
     padding-bottom: 45px !important;
+}
+
+.card-title {
+    font-family: 'Rubik', sans-serif;
+}
+
+.deactivate-button {
+    pointer-events: none;
+}
+
+@media(max-width: 1200px) {
+    .card-left {
+        width: 25rem !important;
+    }
+    .container-start {
+        margin-left: 100px;
+    }
+    .container-win {
+        margin-left: 100px;
+    }
+    .qiuz-answer-card {
+        height: 115px !important;
+    }
+}
+
+@media(max-width: 1100px) {
+    .container-start {
+        margin-left: 10px;
+    }
+    .welcome-text {
+        font-size: 25px;
+    }
+    .container-win {
+        margin-left: 100px;
+        height: 400px;
+        width: 400px;
+    }
+    .win-picture {
+        margin-top: 0px;
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+    }
+    .container-win-text {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 991px) {
+    .container-start {
+        margin-left: 0px;
+        width: 500px;
+    }
+    .card-left {
+        width: 40rem !important;
+    }
+    .container-win {
+        margin-left: 50px;
+    }
+}
+
+@media(max-width: 768px) {
+    .welcome-text {
+        font-size: 20px;
+    }
+    .container-start {
+        width: 400px;
+    }
+    .card-left {
+        width: 55rem !important;
+    }
+    .container-win {
+        margin-left: 0px;
+    }
+    .win-picture {
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+    }
+    .qiuz-answer-card {
+        height: 115px !important;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    .container-win {
+        height: 300px !important;
+        width: 300px !important;
+    }
+    .container-win-text {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .score {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .share-botton {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        width: 100px;
+    }
+    .replay-botton {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 710px) {
+    .qiuz-answer-card {
+        width: 300px;
+    }
+}
+
+@media(max-width: 650px) {
+    .container-start {
+        width: 300px;
+        height: 500px;
+    }
+}
+
+@media(max-width: 531px) {
+    .list-neu-gtoup {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 414px) {
+    .card-left {
+        width: 75rem !important;
+        height: 40rem !important;
+    }
+    .container-start {
+        width: 150px;
+        height: 250px;
+    }
+    .welcome-text {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .start-botton {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+    .card-body {
+        font-size: 10px;
+    }
+    .qiuz-answer-card {
+        width: 170px;
+        height: 70px !important;
+    }
+    .footer-number {
+        font-size: 10px;
+    }
+    .btn-info {
+        font-size: 10px !important;
+        height: 50px;
+        width: 80px;
+    }
+    .progress {
+        height: 10px !important;
+    }
+    .progress-bar {
+        font-size: 10px !important;
+    }
+    .container-win {
+        border-radius: 3%;
+        height: 300px !important;
+        width: 150px !important;
+        margin: 0px;
+        margin-left: 10px;
+    }
+    .container-win-text {
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .container-win-picture {
+        margin-top: 10px;
+    }
+    .score {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .share-botton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        width: 100px;
+    }
+    .replay-botton {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 375px) {
+    .qiuz-answer-card {
+        width: 170px;
+        height: 70px !important;
+    }
+    .card-left {
+        height: 30rem !important;
+    }
+    .progress {
+        height: 10px !important;
+    }
+    .progress-bar {
+        font-size: 10px !important;
+    }
+    .list-neu-gtoup {
+        font-size: 10px;
+        display: flex !important;
+        justify-content: flex-start !important;
+        padding-left: 5px !important;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+    .card-body {
+        font-size: 10px;
+    }
+    .card-body1 {
+        padding-left: 10px;
+    }
+    .footer-number {
+        font-size: 10px;
+    }
+    .btn-info {
+        font-size: 10px !important;
+        height: 50px;
+        width: 80px;
+    }
+    .container-start {
+        width: 190px;
+        height: 350px;
+    }
+    .welcome-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .start-botton {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .container-win {
+        border-radius: 3%;
+        height: 300px !important;
+        width: 150px !important;
+        margin: 0px;
+        margin-left: 10px;
+    }
+    .container-win-text {
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .container-win-picture {
+        margin-top: 10px;
+    }
+    .score {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .share-botton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        width: 100px;
+    }
+    .replay-botton {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 360px) {
+    .qiuz-answer-card {
+        width: 140px;
+        height: 80px !important;
+    }
+    .card-left {
+        height: 30rem !important;
+    }
+    .progress {
+        height: 10px !important;
+    }
+    .progress-bar {
+        font-size: 10px !important;
+    }
+    .list-neu-gtoup {
+        font-size: 10px;
+        display: flex !important;
+        justify-content: flex-start !important;
+        padding-left: 5px !important;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+    .card-body {
+        font-size: 10px;
+    }
+    .card-body1 {
+        padding-left: 5px;
+    }
+    .footer-number {
+        font-size: 10px;
+    }
+    .btn-info {
+        font-size: 10px !important;
+        height: 40px;
+        width: 70px;
+    }
+    .container-start {
+        width: 190px;
+        height: 350px;
+    }
+    .welcome-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .start-botton {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .container-win {
+        border-radius: 3%;
+        height: 300px !important;
+        width: 150px !important;
+        margin: 0px;
+        margin-left: 10px;
+    }
+    .container-win-text {
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .container-win-picture {
+        margin-top: 10px;
+    }
+    .score {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .share-botton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        width: 100px;
+    }
+    .replay-botton {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 360px) {
+    .qiuz-answer-card {
+        width: 140px;
+        height: 80px !important;
+    }
+    .card-left {
+        height: 30rem !important;
+    }
+    .progress {
+        height: 10px !important;
+    }
+    .progress-bar {
+        font-size: 10px !important;
+    }
+    .list-neu-gtoup {
+        font-size: 10px;
+        display: flex !important;
+        justify-content: flex-start !important;
+        padding-left: 5px !important;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+    .card-body {
+        font-size: 10px;
+    }
+    .card-body1 {
+        padding-left: 5px;
+    }
+    .footer-number {
+        font-size: 10px;
+    }
+    .btn-info {
+        font-size: 10px !important;
+        height: 40px;
+        width: 70px;
+    }
+    .container-start {
+        width: 190px;
+        height: 350px;
+    }
+    .welcome-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .start-botton {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .container-win {
+        border-radius: 3%;
+        height: 300px !important;
+        width: 150px !important;
+        margin: 0px;
+        margin-left: 10px;
+    }
+    .container-win-text {
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .container-win-picture {
+        margin-top: 10px;
+    }
+    .score {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .share-botton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        width: 100px;
+    }
+    .replay-botton {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 280px) {
+    .qiuz-answer-card {
+        width: 100px;
+        height: 95px !important;
+    }
+    .card-left {
+        height: 30rem !important;
+        width: 91rem !important;
+    }
+    .progress {
+        height: 10px !important;
+    }
+    .progress-bar {
+        font-size: 10px !important;
+    }
+    .list-neu-gtoup {
+        font-size: 10px;
+        display: flex !important;
+        justify-content: flex-start !important;
+        padding-left: 5px !important;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+    .card-body {
+        font-size: 8px;
+    }
+    .card-body1 {
+        padding-left: 5px;
+    }
+    .footer-number {
+        font-size: 10px;
+    }
+    .btn-info {
+        font-size: 10px !important;
+        height: 40px;
+        width: 63px;
+        padding: 1px;
+    }
+    .container-start {
+        width: 100px;
+        height: 200px;
+    }
+    .welcome-text {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    .start-botton {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .container-win {
+        border-radius: 3%;
+        height: 250px !important;
+        width: 100px !important;
+        margin: 0px;
+        margin-left: 10px;
+    }
+    .container-win-text {
+        margin-top: 20px;
+        font-size: 10px;
+        text-align: center;
+    }
+    .container-win-picture {
+        margin-top: 0px;
+    }
+    .score {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+    .share-botton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 10px;
+        width: 70px;
+    }
+    .replay-botton {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+}
+
+@media(max-height: 600px) {
+    .card-left {
+        height: 35rem !important;
+        width: 30rem !important;
+    }
+    .container {
+        width: 100% !important;
+        height: 93vh !important;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .qiuz-answer-card {
+        width: 700px;
+        height: 100px !important;
+    }
 }

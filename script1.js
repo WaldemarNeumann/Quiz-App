@@ -67,40 +67,70 @@ function init() {
 }
 
 function showQuestion() {
+    //Show End Screen
+    if (currentQuestion >= questions.length) {
+        document.getElementById('endscreen').style = '';
+        document.getElementById('questionsbody').style = 'display: none';
 
-    if (gameIsOver()) {
-        showEndScreen();
-    } else {
-        updateProgressBar()
-        updateToNextQuestion();
+        document.getElementById('amount-questions').innerHTML = questions.length;
+        document.getElementById('amount-right-questions').innerHTML = rightquestions;
+    } else { //Show Question
+
+        let procent = currentQuestion / questions.length;
+        procent = Math.round(procent * 100);
+
+        document.getElementById('progress-bar').innerHTML = `${procent} %`;
+        document.getElementById('progress-bar').style = `width: ${procent}%;`;
+
+        console.log('Fortschritt', procent);
+
+        let question = questions[currentQuestion];
+
+        document.getElementById('questions-number').innerHTML = currentQuestion + 1;
+
+        document.getElementById('questionText').innerHTML = question['question'];
+        document.getElementById('answer_1').innerHTML = question['answer_1'];
+        document.getElementById('answer_2').innerHTML = question['answer_2'];
+        document.getElementById('answer_3').innerHTML = question['answer_3'];
+        document.getElementById('answer_4').innerHTML = question['answer_4'];
+
+        document.getElementById('answer_1').classList.remove("deactivate-botton");
+        document.getElementById('answer_2').classList.remove("deactivate-botton");
+        document.getElementById('answer_3').classList.remove("deactivate-botton");
+        document.getElementById('answer_4').classList.remove("deactivate-botton");
     }
 }
 
 function answer(selection) {
     let question = questions[currentQuestion];
+    // console.log('Selected answer is', selection);
     let selectedQuestionNumber = selection.slice(-1);
+    // console.log('SelectedQuestionNumber is', selectedQuestionNumber);
+    // console.log('Current question is', question['right_answer']);
     let idOfRightAnswer = `answer_${question['right_answer']}`;
 
-    if (rightAnswerSelected(selectedQuestionNumber, question)) {
-
+    if (selectedQuestionNumber == question['right_answer']) {
+        // console.log('Antwort richtig')
         document.getElementById(selection).parentNode.classList.add('bg-success');
         rightquestions++;
         audio_right.play();
-        addReactivateButton()
+        document.getElementById('answer_1').classList.add("deactivate-botton");
+        document.getElementById('answer_2').classList.add("deactivate-botton");
+        document.getElementById('answer_3').classList.add("deactivate-botton");
+        document.getElementById('answer_4').classList.add("deactivate-botton");
 
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
         audio_wrong.play();
-        addReactivateButton();
+        document.getElementById('answer_1').classList.add("deactivate-botton");
+        document.getElementById('answer_2').classList.add("deactivate-botton");
+        document.getElementById('answer_3').classList.add("deactivate-botton");
+        document.getElementById('answer_4').classList.add("deactivate-botton");
 
     }
 
     document.getElementById('next-button').disabled = false;
-}
-
-function rightAnswerSelected(selectedQuestionNumber, question) {
-    return selectedQuestionNumber == question['right_answer'];
 }
 
 function nextQuestion() {
@@ -130,53 +160,4 @@ function restartGame() {
     currentQuestion = 0;
 
     init()
-}
-
-function showEndScreen() {
-
-    document.getElementById('endscreen').style = '';
-    document.getElementById('questionsbody').style = 'display: none';
-
-    document.getElementById('amount-questions').innerHTML = questions.length;
-    document.getElementById('amount-right-questions').innerHTML = rightquestions;
-}
-
-function gameIsOver() {
-    return currentQuestion >= questions.length
-}
-
-function updateProgressBar() {
-    let procent = currentQuestion / questions.length;
-    procent = Math.round(procent * 100);
-
-    document.getElementById('progress-bar').innerHTML = `${procent} %`;
-    document.getElementById('progress-bar').style = `width: ${procent}%;`;
-}
-
-function updateToNextQuestion() {
-    let question = questions[currentQuestion];
-
-    document.getElementById('questions-number').innerHTML = currentQuestion + 1;
-
-    document.getElementById('questionText').innerHTML = question['question'];
-    document.getElementById('answer_1').innerHTML = question['answer_1'];
-    document.getElementById('answer_2').innerHTML = question['answer_2'];
-    document.getElementById('answer_3').innerHTML = question['answer_3'];
-    document.getElementById('answer_4').innerHTML = question['answer_4'];
-
-    removeDeactivateButton();
-}
-
-function removeDeactivateButton() {
-    document.getElementById('answer_1').classList.remove("deactivate-button");
-    document.getElementById('answer_2').classList.remove("deactivate-button");
-    document.getElementById('answer_3').classList.remove("deactivate-button");
-    document.getElementById('answer_4').classList.remove("deactivate-button");
-}
-
-function addReactivateButton() {
-    document.getElementById('answer_1').classList.add("deactivate-button");
-    document.getElementById('answer_2').classList.add("deactivate-button");
-    document.getElementById('answer_3').classList.add("deactivate-button");
-    document.getElementById('answer_4').classList.add("deactivate-button");
 }
