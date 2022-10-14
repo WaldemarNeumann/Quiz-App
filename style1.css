@@ -1,0 +1,74 @@
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-right: 200px;
+}
+
+.card-left {
+    background-color: aqua !important;
+}
+
+.card-right {
+    height: 640px;
+    width: 640px;
+    margin-left: 10px;
+}
+
+.card-right-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/bg\ b.png);
+    background-size: cover;
+    background-position: inherit;
+    height: 640px;
+    width: 640px;
+}
+
+.card-tight-text {
+    font-size: 30px;
+}
+
+.start-button {
+    font-size: 30px;
+}
+
+.d-none {
+    display: none;
+}
+
+.card-body-neu {
+    padding-top: 70px !important;
+}
+
+.list-group-neu {
+    height: 7rem !important;
+    padding-top: 50px !important;
+    cursor: pointer;
+    border: 2px solid lightgray !important;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.list-group-neu:hover {
+    background-color: rgb(234, 234, 215);
+}
+
+.card-neu {
+    border: none !important;
+}
+
+.amount-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.bg-success,
+.bg-danger {
+    color: white !important;
+}

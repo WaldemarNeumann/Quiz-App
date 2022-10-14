@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="fonts.css">
+    <script src="script1.js"></script>
+
+    <!--bootstrip-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="init()">
+
+    <div class="main-div">
+        <div class="card card-left" style="width: 15rem; height: 40rem;">
+            <img src="img/Group 8.png" class="card-img-top" alt="...">
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Allgemein IT</li>
+                <li class="list-group-item">HTML</li>
+                <li class="list-group-item">CSS</li>
+                <li class="list-group-item">Javascript</li>
+            </ul>
+
+        </div>
+
+        <div class="card-right">
+            <div class="card-right-menu" id="game-start">
+                <p class="card-tight-text">Welcome to</p>
+                <p class="card-tight-text">The Answer Quest</p>
+                <button class="start-button" onclick="startGame()">Click to Start</button>
+            </div>
+
+            <div id="card-right" class="card card-neu" style="width: 40rem; height: 40rem; display: none;">
+
+                <div class="card-body card-body-neu">
+                    <h5 id="questiontext" class="card-title">Card title</h5>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li id="answer-1" onclick="answer('answer-1')" class="list-group-item list-group-neu">An item</li>
+                    <li id="answer-2" onclick="answer('answer-2')" class="list-group-item list-group-neu">A second item</li>
+                    <li id="answer-3" onclick="answer('answer-3')" class="list-group-item list-group-neu">A third item</li>
+                    <li id="answer-4" onclick="answer('answer-4')" class="list-group-item list-group-neu">A third item</li>
+                </ul>
+
+                <div class="amount-question">
+
+                    <div>
+                        <b id="currentQqustions">1</b> von <b id="amountQustion">3</b> Fragen
+                    </div>
+
+                    <div>
+                        <button disabled id="nextQuestion" onclick="nextQustion()">Nächste Frage</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
